@@ -572,9 +572,10 @@
 <h3 id="system-requirements">System requirements</h3>
 <p>Note that IPFS Desktop client is an alpha-stage software still in development. The command line version of the software for servers/home servers is more mature.</p>
 <ul>
-<li>Requires internet serice provider with unlimited bandwidth. Do not install IPFS if you have a monthly bandwidth or data cap.</li>
-<li>Recommended at least 16GB RAM and Intel i5 or equivalent processor</li>
-<li>Recommended at least 100 mbps, gigabit connection preferred</li>
+<li>Requires internet serice provider with unlimited bandwidth</li>
+<li>Do not share if you have a monthly bandwidth or data cap</li>
+<li>Recommended at least a toaster with 2GB RAM</li>
+<li>Recommended at least 100 mbps</li>
 <li>Recommended <a href="#port-forwarding">port forwarding</a></li>
 </ul>
 <h3 id="get-started_1">Get started</h3>
@@ -619,7 +620,8 @@ ipfs/go-ipfs:latest
 <p>Once it's complete, jump to the <a href="#cid-hash-index">CID Hash index</a>.</p>
 <p>You can also access the WebUI and add or manage pins from there. Port 5001 is the API port of the IPFS docker container and contains the same UI as IPFS desktop. You can access the webui in your browser at <a href="http://127.0.0.1:5001/webui">http://127.0.0.1:5001/webui</a>.</p>
 <h4 id="cid-hash-index">CID Hash index</h4>
-<p>Once you've pinned your first 1,000 you can add the next 100,000 books of the Library Genesis Scitech collection here:</p>
+<p>Once you've pinned your first 1,000 you can add the next 2.7 million books of the Library Genesis Scitech collection.</p>
+<p>The CID Hash Index is a comma-separated list containing the scitech directory number, filesize, and CID:</p>
 <iframe src="https://pastebin.com/embed_iframe/tPvE36Sd" style="border:none;width:100%"></iframe>
 
 <h4 id="port-forwarding">Port forwarding</h4>
