@@ -1,0 +1,20 @@
+site_name: freeread.org
+nav:
+    - Home: index.md
+    - IPFS Free Library: ipfs.md
+    - Charitable Seeding: torrents.md
+    - /r/libgen wiki: reddit-libgen.md
+    - /r/scihub wiki: reddit-scihub.md
+theme:
+  name: material
+  favicon: img/favicon.jpg
+  features:
+    - navigation.expand
+  palette:
+    primary: black
+plugins:
+  - search
+#extra_javascript:
+#  - '/js/extra.js'
+#extra_css:
+#    - /css/extra.css
