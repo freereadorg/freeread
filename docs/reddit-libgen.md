@@ -1,12 +1,25 @@
 # /r/libgen FAQ - Frequently Asked Questions
 
+### ► Is LibGen down? I can't access it.
+
+**Usually it's because your government has banned access.**
+
+## Solution 1
+>[Enable DNS over HTTPS](https://developers.cloudflare.com/1.1.1.1/dns-over-https/web-browser) to override your country's censorship over the internet.
+
+## Solution 2
+>Install a [free VPN](https://protonvpn.com/) or download [the Tor Browser](https://www.torproject.org/download/) to access websites your government has banned.
+
+## Solution 3
+>Request books or articles using the [Nexus Search Telegram bot](https://t.me/libgen_scihub_bot).
+
 ### ► General questions
 
 * How do I find books on Library Genesis (LibGen)?
 >The most reliable way to find books is to search for the ISBN. You can find the ISBN on a book's Amazon product page. If that doesn't work, try the author's last name and a word from the title. Once you have your results, click the "Language" column to sort by Language. To get your book, click on one of the 5 mirror links provided.
 
 * Library Genesis (LibGen) is down for me.
->Visit the [mirrors](http://vertsluisants.fr/index.php?article4/where-scihub-libgen-server-down). If your country has blocked/banned access to the mirrors, use a free VPN like [ProtonVPN](https://protonvpn.com/).
+>Visit the mirrors listed on the subreddit dropdown menu or sidebar. If your country has blocked/banned access to the mirrors, use a free VPN like [ProtonVPN](https://protonvpn.com/) or [Enable DNS over HTTPS](https://developers.cloudflare.com/1.1.1.1/dns-over-https/web-browser).
 
 * Do I need to use a VPN to access Library Genesis (LibGen)?
 >Unless you live in a country without freedom of speech, where reading certain books is banned, then there is no reason to use a VPN. But if you can't access LibGen because it is blocked/banned in your country, then a VPN will unlock access.
@@ -31,11 +44,11 @@
 
 ### ► Giving and donating
 
-* How do I upload my books or contribute material to the library?**
->Visit the [Library Genesis MHUT forums](https://forum.mhut.org/) for login credentials and further instructions for uploading.
+* How do I upload my books or contribute material to the library?
+>Visit the [Library Genesis MHUT forums](https://forum.mhut.org/viewtopic.php?p=9000) for login credentials and further instructions for uploading.
 
 * How can I help seed the Library Genesis (LibGen) torrents?
->You can join the [Library Genesis Seeding Project](https://www.reddit.com/r/DataHoarder/comments/ed9byj/library_genesis_project_update_25_million_books/) to help seed the torrents that serve to preserve and archive the 2.5-million books in the library collection. [PhillM's LibGen torrent index](https://phillm.net/libgen-seeds-needed.php) tracks which torrents need seeders, start there.
+>You can join the [Library Genesis Seeding Project](http://freeread.org/torrents/) to help seed the torrents that serve to preserve and archive the 2.5-million books in the library collection. [PhillM's LibGen torrent index](https://phillm.net/libgen-seeds-needed.php) tracks which torrents need seeders, start there.
 
 * How do the torrents work?
 >There are roughly 2,400 torrents in total and each torrent contains 1,000 books (2.4 million books). Each book file is named by its MD5 hash string. The SQL database files contain the file extension, book names, authors, and all other meta information. The book files and SQL databases together make up the library, so distributing copies of these files means anyone in the world can create a copy of Library Genesis.

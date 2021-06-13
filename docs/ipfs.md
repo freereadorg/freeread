@@ -16,6 +16,8 @@ Each CID Hash for Library Genesis represents 1,000 books, or about 5 gigabytes o
 
 Before you begin, make sure you understand [the legal implications of hosting and sharing copyrighted material.](https://www.nolo.com/legal-encyclopedia/what-to-do-if-your-named-bit-torrent-lawsuit.html)
 
+freeread.org does not host the file CIDs documented in this guide or provide downloads. CIDs are simply public identifiers that are listed here for educational purposes only.
+
 ## Installing IPFS
 
 Are you a power-user or run a server? Jump to the section on [getting started with Docker.](#docker-for-servers)
@@ -101,11 +103,11 @@ You can also access the WebUI and add or manage pins from there. Port 5001 is th
 
 #### CID Hash index
 
-Once you've pinned your first 1,000 you can add the next 2.7 million books of the Library Genesis Scitech collection.
+Once you've pinned your first 1,000 you can add the next 2.9 million books of the Library Genesis Scitech collection.
 
 The CID Hash Index is a comma-separated list containing the scitech directory number, filesize, and CID:
 
-<iframe src="https://pastebin.com/embed_iframe/tPvE36Sd" style="border:none;width:100%"></iframe>
+<iframe src="https://pastebin.com/embed_iframe/2e4ytHpm" style="border:none;width:100%"></iframe>
 
 #### Port forwarding
 
