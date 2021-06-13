@@ -1,0 +1,737 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="img/favicon.jpg">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>IPFS Free Library - freeread.org</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ipfs-free-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="freeread.org" class="md-header__button md-logo" aria-label="freeread.org" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            freeread.org
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IPFS Free Library
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="freeread.org" class="md-nav__button md-logo" aria-label="freeread.org" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    freeread.org
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          IPFS Free Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ipfs.html" class="md-nav__link md-nav__link--active">
+        IPFS Free Library
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    Get started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copyright-warning" class="md-nav__link">
+    Copyright warning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-ipfs" class="md-nav__link">
+    Installing IPFS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-client" class="md-nav__link">
+    Desktop client
+  </a>
+  
+    <nav class="md-nav" aria-label="Desktop client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-started_1" class="md-nav__link">
+    Get started
+  </a>
+  
+    <nav class="md-nav" aria-label="Get started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-your-first-cid-hash" class="md-nav__link">
+    Pin your first CID Hash
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-for-servers" class="md-nav__link">
+    Docker for servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker for servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements_1" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-started_2" class="md-nav__link">
+    Get started
+  </a>
+  
+    <nav class="md-nav" aria-label="Get started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-docker-container" class="md-nav__link">
+    Create your docker container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-your-first-cid-hash_1" class="md-nav__link">
+    Pin your first CID Hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cid-hash-index" class="md-nav__link">
+    CID Hash index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-forwarding" class="md-nav__link">
+    Port forwarding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#torrents" class="md-nav__link">
+    Torrents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="torrents.html" class="md-nav__link">
+        Charitable Seeding
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reddit-libgen.html" class="md-nav__link">
+        /r/libgen wiki
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reddit-scihub.html" class="md-nav__link">
+        /r/scihub wiki
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    Get started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copyright-warning" class="md-nav__link">
+    Copyright warning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-ipfs" class="md-nav__link">
+    Installing IPFS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-client" class="md-nav__link">
+    Desktop client
+  </a>
+  
+    <nav class="md-nav" aria-label="Desktop client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-started_1" class="md-nav__link">
+    Get started
+  </a>
+  
+    <nav class="md-nav" aria-label="Get started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-your-first-cid-hash" class="md-nav__link">
+    Pin your first CID Hash
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-for-servers" class="md-nav__link">
+    Docker for servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker for servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements_1" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-started_2" class="md-nav__link">
+    Get started
+  </a>
+  
+    <nav class="md-nav" aria-label="Get started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-docker-container" class="md-nav__link">
+    Create your docker container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-your-first-cid-hash_1" class="md-nav__link">
+    Pin your first CID Hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cid-hash-index" class="md-nav__link">
+    CID Hash index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-forwarding" class="md-nav__link">
+    Port forwarding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#torrents" class="md-nav__link">
+    Torrents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="ipfs-free-library">IPFS Free Library</h1>
+<p>IPFS is here. IPFS is a de-centralized file and webhosting protocol founded on ideals of freedom and openness. The Library Genesis collection is live on IPFS as of today, accessible via <a href="http://libgen.rs">libgen.rs</a> and <a href="https://libgen.fun">libgen.fun</a>. IPFS is like BitTorrent but has a single global swarm, and it's accessible on the web. You can learn about the IPFS project from <a href="https://ipfs.io">IPFS.io</a> or <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">Wikipedia</a>.</p>
+<p>IPFS is the next technical revolution in peer-to-peer networking, allowing people like you to share books with readers who request them. IPFS is the next best weapon in the fight against domain take-downs and internet censorship.</p>
+<p>We can now each become a founding shelf for a free, global library. Let's start.</p>
+<h2 id="get-started">Get started</h2>
+<p>IPFS is simple. <em>Hosts</em> (you) <em>Pin</em> files (books) using <em>Content Identifiers</em> (CID Hashes) to share them on the IPFS network. CID Hashes can represent individual files or an entire folder. Pinning saves the files to your local computer so you can share them, and others can Pin them from you.</p>
+<p>Each CID Hash for Library Genesis represents 1,000 books, or about 5 gigabytes of local file storage. 100 pins = 100,000 books! Who ever told you that you couldn't start your own library?</p>
+<h2 id="copyright-warning">Copyright warning</h2>
+<p>Before you begin, make sure you understand <a href="https://www.nolo.com/legal-encyclopedia/what-to-do-if-your-named-bit-torrent-lawsuit.html">the legal implications of hosting and sharing copyrighted material.</a></p>
+<p>freeread.org does not host the file CIDs documented in this guide or provide downloads. CIDs are simply public identifiers that are listed here for educational purposes only.</p>
+<h2 id="installing-ipfs">Installing IPFS</h2>
+<p>Are you a power-user or run a server? Jump to the section on <a href="#docker-for-servers">getting started with Docker.</a></p>
+<p>If you're not, just install the <a href="https://ipfs.io/#install">IPFS Desktop client</a>. Make sure to read the <a href="#system-requirements">desktop system requirements.</a></p>
+<h2 id="desktop-client">Desktop client</h2>
+<h3 id="system-requirements">System requirements</h3>
+<p>Note that IPFS Desktop client is an alpha-stage software still in development. The command line version of the software for servers/home servers is more mature.</p>
+<ul>
+<li>Requires internet serice provider with unlimited bandwidth</li>
+<li>Do not share if you have a monthly bandwidth or data cap</li>
+<li>Recommended at least a toaster with 2GB RAM</li>
+<li>Recommended at least 100 mbps</li>
+<li>Recommended <a href="#port-forwarding">port forwarding</a></li>
+</ul>
+<h3 id="get-started_1">Get started</h3>
+<h4 id="pin-your-first-cid-hash">Pin your first CID Hash</h4>
+<p>Click Files &gt; Import &gt; From IPFS</p>
+<p>Then copy and paste in your first CID Hash containing 1,000 books (about 6GB). Once it's complete, jump to the <a href="#cid-hash-index">CID Hash index</a>.</p>
+<pre><code>
+bafykbzaceaeofefgje22l7rhgtcgs22m32f4ysw5nqa3ty5zawfovqam7pj2c
+
+</code></pre>
+<p><img alt="Screenshot" src="img/ipfs.2.png" /></p>
+<h2 id="docker-for-servers">Docker for servers</h2>
+<p>Previously downloaded the Library Genesis torrents for the Library Genesis Seeding Project? Follow these steps then jump to <a href="#torrents">torrents</a>.</p>
+<h3 id="system-requirements_1">System requirements</h3>
+<ul>
+<li>Docker (<a href="https://docs.docker.com/get-docker/">docker.com/get-docker</a>)</li>
+<li>Requires internet serice provider with unlimited bandwidth. Do not install IPFS if you have a monthly bandwidth or data cap.</li>
+<li>Requires between 10GB or more of hard-drive space. For more information refer to the <a href="https://cryptpad.fr/sheet/#/2/sheet/view/I5UinPRnv2LNZlMQcNODieaoo7W9L1KDbJMX36OKvdE/">CID Hash index with file sizes.</a></li>
+<li>Recommended at least 16GB RAM and Intel i5 or equivalent processor</li>
+<li>Recommended at least 100 mbps, gigabit connection preferred</li>
+<li>Recommended <a href="#port-forwarding">port forwarding</a></li>
+</ul>
+<h3 id="get-started_2">Get started</h3>
+<h4 id="create-your-docker-container">Create your docker container</h4>
+<p>You can more documentation for the Go-based IPFS Docker container at <a href="https://hub.docker.com/r/ipfs/go-ipfs/">Docker Hub.</a>.</p>
+<p>/export will store your downloaded files, while the books from pinned CID Hashes will be located in /ipfs/data/blocks.</p>
+<pre><code>docker run -d \
+--name go-ipfs \
+-v $HOME/ipfs/export:/export \
+-v $HOME/ipfs/data:/data/ipfs \
+-p 4001:4001 \
+-p 127.0.0.1:8080:8080 \
+-p 127.0.0.1:5001:5001 \
+ipfs/go-ipfs:latest 
+</code></pre>
+<pre><code>docker start go-ipfs
+</code></pre>
+<h4 id="pin-your-first-cid-hash_1">Pin your first CID Hash</h4>
+<p>This 'docker exec' command runs your 'go-ipfs' container with container command 'ipfs pin add'. This CID Hash contains 1,000 books, to add it run:</p>
+<pre><code>docker exec go-ipfs ipfs pin add bafykbzaceaeofefgje22l7rhgtcgs22m32f4ysw5nqa3ty5zawfovqam7pj2c --progress
+</code></pre>
+<p>Once it's complete, jump to the <a href="#cid-hash-index">CID Hash index</a>.</p>
+<p>You can also access the WebUI and add or manage pins from there. Port 5001 is the API port of the IPFS docker container and contains the same UI as IPFS desktop. You can access the webui in your browser at <a href="http://127.0.0.1:5001/webui">http://127.0.0.1:5001/webui</a>.</p>
+<h4 id="cid-hash-index">CID Hash index</h4>
+<p>Once you've pinned your first 1,000 you can add the next 2.9 million books of the Library Genesis Scitech collection.</p>
+<p>The CID Hash Index is a comma-separated list containing the scitech directory number, filesize, and CID:</p>
+<iframe src="https://pastebin.com/embed_iframe/2e4ytHpm" style="border:none;width:100%"></iframe>
+
+<h4 id="port-forwarding">Port forwarding</h4>
+<p>The IPFS swarm peer port is 4001. Opening it up will help you connect, but it is optional if you can't do so. To learn how to port forward port 4001 search your <a href="https://www.google.com/search?q=ac1750+port+forwarding"><em>router model + port forward.</em></a></p>
+<h2 id="torrents">Torrents</h2>
+<p>Many volunteers have helped seed the torrents with the <a href="https://www.reddit.com/r/DataHoarder/comments/ed9byj/library_genesis_project_update_25_million_books/">Library Genesis Seeding Project</a>.</p>
+<p>If you already downloaded the torrents you can add torrent folders to IPFS using <code>ipfs add</code></p>
+<p>Start go-ipfs normally with <code>docker start go-ipfs</code></p>
+<p>Configure go-ipfs to allow you link folders to the Filestore:</p>
+<pre><code>docker exec go-ipfs ipfs config --json Experimental.FilestoreEnabled true
+</code></pre>
+<p>Restart with <code>docker stop go-ipfs &amp;&amp; docker start go-ipfs</code></p>
+<p>Add the folders from where you saved them, starting with folder 1000:</p>
+<pre><code>docker exec go-ipfs ipfs add $home/books/1000/ -r -w --nocopy --hash=blake2b-256 &gt;&gt;  $home/books/ipfs-add.log
+</code></pre>
+<p>Watch the log and check out the network activity:</p>
+<pre><code>docker exec go-ipfs tail -f $home/books/ipfs-add.log
+docker exec go-ipfs ipfs stats bw --poll=true --interval=1s
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="torrents.html" class="md-footer__link md-footer__link--next" aria-label="Next: Charitable Seeding" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Charitable Seeding
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>
